@@ -10,7 +10,7 @@ trans_36 = "".join(chr(x ^ 0x36) for x in xrange(256))
 block_size = hashlib.sha256().block_size
 
 def dumphex(desc, buf):
-    print "========== begin %s ==========" % desc 
+    print "========== begin %s ==========" % desc
     for i,c in enumerate(buf) :
         sys.stdout.write(hex(ord(c)))
         if 0 == ((i + 1) % 15):
@@ -19,7 +19,7 @@ def dumphex(desc, buf):
             sys.stdout.write(",")
     print
     sys.stdout.flush()
-    print "========== end %s ==========" % desc 
+    print "========== end %s ==========" % desc
 
 
 def usage():
